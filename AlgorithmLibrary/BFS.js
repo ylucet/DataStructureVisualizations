@@ -151,6 +151,7 @@ BFS.prototype.doBFS = function(startVetex)
 
 	}
 	var vertex = parseInt(startVetex);
+	this.cmd("SetText", this.visitedID[vertex], "T");
 	this.visited[vertex] = true;
 	this.queue[tail] = vertex;
 	this.cmd("CreateLabel", queueID[tail],  vertex, QUEUE_START_X + queueSize * QUEUE_SPACING, QUEUE_START_Y);
